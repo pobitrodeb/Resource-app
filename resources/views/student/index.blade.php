@@ -47,7 +47,13 @@
                                         <td>
                                             <a href="{{url('student/'.$student->id)}}" class="btn btn-primary"> View </a>
                                             <a href="{{ url('student/'.$student->id.'/edit') }}" class="btn btn-warning"> Edit</a>
-                                            <a href="" class="btn btn-danger"> Delete </a>
+
+                                            <form action="{{ url('student/'.$student->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger"> Delete </a>
+                                            </form>
+
                                         </td>
                                     </tr>
                                 @endforeach
