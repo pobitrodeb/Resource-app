@@ -42,7 +42,7 @@ class StudentController extends Controller
         $student->email = $request->input('email');
         $student->phone = $request->input('phone');
         $student->save();
-        return back();
+        return redirect('/student');
     }
 
     /**
@@ -53,7 +53,8 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = Student::find($id);
+        return view('student.detail', compact('student'));
     }
 
     /**

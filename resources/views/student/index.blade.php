@@ -22,7 +22,7 @@
                 <div class="card">
                     <div class="card-header">
                         <a href="{{ url('student/create') }}" class="btn btn-primary"> Add Student </a>
-                       
+
                     </div>
                     <div class="card-body">
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -37,14 +37,14 @@
                             </thead>
 
                             <tbody>
-                                @foreach ($students as $item)
+                                @foreach ($students as $student)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td>
-                                        <td>{{ $item->email }}</td>
-                                        <td>{{ $item->phone }}</td>
+                                        <td>{{ $student->name }}</td>
+                                        <td>{{ $student->email }}</td>
+                                        <td>{{ $student->phone }}</td>
                                         <td>
-                                            <a href="" class="btn btn-primary"> View </a>
+                                            <a href="{{url('student/'.$student->id)}}" class="btn btn-primary"> View </a>
                                             <a href="" class="btn btn-warning"> Edit</a>
                                             <a href="" class="btn btn-danger"> Delete </a>
                                         </td>
