@@ -21,6 +21,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
+                        <h4 class="text-center text-success">{{Session::get('message')}}</h4>
                         <a href="{{ url('student/create') }}" class="btn btn-primary"> Add Student </a>
 
                     </div>
@@ -45,7 +46,7 @@
                                         <td>{{ $student->phone }}</td>
                                         <td>
                                             <a href="{{url('student/'.$student->id)}}" class="btn btn-primary"> View </a>
-                                            <a href="" class="btn btn-warning"> Edit</a>
+                                            <a href="{{ url('student/'.$student->id.'/edit') }}" class="btn btn-warning"> Edit</a>
                                             <a href="" class="btn btn-danger"> Delete </a>
                                         </td>
                                     </tr>
