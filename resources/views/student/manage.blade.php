@@ -32,8 +32,7 @@
                         <th>Sl No.</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Mobile</th>
-                        <th>Image</th>
+                        <th>Phone </th>
                         <th>Action</th>
                     </tr>
                     </thead>
